@@ -11,7 +11,6 @@ def fibonacci(n):
     return _fib(n)[0]
 
 
-# Returns a tuple (F(n), F(n+1))
 def _fib(n):
     if n == 0:
         return (0, 1)
@@ -25,8 +24,7 @@ def _fib(n):
             return (d, c + d)
 
 i = 1
-while 1:
-    if len(str(fibonacci(i))) == 1000:
-        print i
-        break
+while len(str(fibonacci(i))) != 1000:
     i += 1
+
+print i
